@@ -1,4 +1,4 @@
-let students = [
+const students = [
   [
     { name: "Ivan", score: 35, date: "2022-10-11" },
     { name: "Maria", score: 5, date: "2022-10-10" },
@@ -24,17 +24,21 @@ let students = [
     { name: "Tanya", score: 0, date: "2022-10-11" },
   ],
 ];
+let studentsArray = [];
+let studentsMaxScore = 0;
+for (let student of students) {
+  for (let studentScore of student.score) {
+    studentsArray.push(studentScore);
+  }
+
+  //studentsMaxScore = Math.max(studentsMaxScore, student.score);
+}
+console.log(studentsArray);
 
 // function findMaxScore(students) {
 //   let scoreArray = [];
 //   for (let student of students) {
 //     scoreArray.push(student.score);
-//     return Math.max(...scoreArray);
 //   }
 // }
-// console.log(findMaxScore(students));
-let studentsMaxScore = 0;
-for (let student of students) {
-  studentsMaxScore = Math.max(studentsMaxScore, student.score);
-}
-console.log(studentsMaxScore);
+// console.log(scoreArray);
