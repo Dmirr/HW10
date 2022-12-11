@@ -24,21 +24,21 @@ const students = [
     { name: "Tanya", score: 0, date: "2022-10-11" },
   ],
 ];
-let studentsArray = [];
-let studentsMaxScore = 0;
-for (let student of students) {
-  for (let studentScore of student.score) {
-    studentsArray.push(studentScore);
-  }
 
-  //studentsMaxScore = Math.max(studentsMaxScore, student.score);
+function topStudents(studentsScore) {
+  let newStudentScore = [];
+
+  studentsScore.forEach(function (array) {
+    array.forEach(function (students) {
+      newStudentScore.push(students);
+    });
+  });
 }
-console.log(studentsArray);
+let sortedArray = newStudentScore.sort((a, b) => {
+  return b.score - a.score;
+});
+let i = 0;
+let studentsTop = [];
+studentsTop.push(sortedArray[i]);
 
-// function findMaxScore(students) {
-//   let scoreArray = [];
-//   for (let student of students) {
-//     scoreArray.push(student.score);
-//   }
-// }
-// console.log(scoreArray);
+console.log(`${studentsTop[0].name} ${studentsTop[0].score}`);
