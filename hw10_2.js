@@ -33,7 +33,7 @@ function topStudents(studentsScore) {
       newStudentScore.push(students);
     });
   });
-}
+
 let sortedArray = newStudentScore.sort((a, b) => {
   return b.score - a.score;
 });
@@ -42,3 +42,5 @@ let studentsTop = [];
 studentsTop.push(sortedArray[i]);
 
 console.log(`${studentsTop[0].name} ${studentsTop[0].score}`);
+}
+topStudents(studentsScore);
