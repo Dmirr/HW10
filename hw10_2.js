@@ -1,4 +1,4 @@
-const students = [
+const studentsScore = [
   [
     { name: "Ivan", score: 35, date: "2022-10-11" },
     { name: "Maria", score: 5, date: "2022-10-10" },
@@ -34,13 +34,22 @@ function topStudents(studentsScore) {
     });
   });
 
-let sortedArray = newStudentScore.sort((a, b) => {
-  return b.score - a.score;
-});
-let i = 0;
-let studentsTop = [];
-studentsTop.push(sortedArray[i]);
+  let sortedArray = newStudentScore.sort((a, b) => {
+    return b.score - a.score;
+  });
+  let i = 0;
+  let studentsTop = [];
+  studentsTop.push(sortedArray[i]);
 
-console.log(`${studentsTop[0].name} ${studentsTop[0].score}`);
+  console.log(`Первый студент ${studentsTop[0].name} ${studentsTop[0].score}`);
+
+  while (sortedArray[i].score == sortedArray[i + 1].score) {
+    studentsTop.push(sortedArray[i + 1]);
+    console.log(
+      `Второй студент ${studentsTop[i + 1].name}  ${studentsTop[i + 1].score} `
+    );
+    i++;
+  }
+  return studentsTop;
 }
 topStudents(studentsScore);
