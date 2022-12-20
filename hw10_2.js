@@ -41,15 +41,21 @@ function topStudents(studentsScore) {
   let studentsTop = [];
   studentsTop.push(sortedArray[i]);
 
-  console.log(`Первый студент ${studentsTop[0].name} ${studentsTop[0].score}`);
+  console.log(
+    `Поздравляю первого студента - это ${studentsTop[0].name} ${studentsTop[0].score} очков`
+  );
 
   while (sortedArray[i].score == sortedArray[i + 1].score) {
     studentsTop.push(sortedArray[i + 1]);
     console.log(
-      `Второй студент ${studentsTop[i + 1].name}  ${studentsTop[i + 1].score} `
+      `Второе место - ${studentsTop[i + 1].name}  ${
+        studentsTop[i + 1].score
+      } очков`
     );
     i++;
   }
   return studentsTop;
 }
 topStudents(studentsScore);
+
+module.exports = topStudents;
