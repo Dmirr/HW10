@@ -28,6 +28,6 @@ const studentsScore = [
 
 describe("Test top students", () => {
   it("Проверка на больше или равно ", () => {
-    expect(topStudents(studentsScore)).toEqual(35);
+    expect(topStudents(studentsScore)).toEqual([{ name: "Ivan", score: 35, date: "2022-10-11" },{ name: "Stepan", score: 35, date: "2022-10-12" }]);
   });
 });
