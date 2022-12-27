@@ -104,3 +104,4 @@ dist
 .tern-port
 # Text file
 *.txt/
+.vscode/extensions.json
