@@ -56,6 +56,6 @@ function topStudents(studentsScore) {
   }
   return studentsTop;
 }
-topStudents(studentsScore);
+//topStudents(studentsScore);
 
 module.exports = topStudents;
